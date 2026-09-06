@@ -1,0 +1,18 @@
+/**
+ * @module tsconfig.json
+ * @description TypeScript configuration file.
+ * Compiler options config for code rutes helps.
+ * @author TypeScript install & Ismael Plaza
+ */
+
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "compilerOptions": {
+    "baseUrl": ".", // Base directory.
+    "paths": {"@/*": ["src/*"]}, // Directory shortcut.
+    "strictNullChecks": true, // Scrict type checking.
+    "jsx": "preserve" // JSX for Astro components.
+  },
+  "exclude": ["dist"]
+}
