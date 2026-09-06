@@ -9,7 +9,8 @@ Antes de empezar ten en cuenta que este proyecto se realizó para usar Astro y G
 |||
 | ---: | :--- |
 | **Proyecto, código y tutorial** | 22 de Agosto de 2026 |
-| **Node.js** | v24.18.0 |
+| **Node.js local** | v24.18.0 |
+| **Node.js Github** | 22.12.0 |
 | **npm** | 11.16.0 |
 | **npx** | 11.16.0 |
 | **Git** | 2.55.0.windows.1 |
@@ -81,6 +82,10 @@ Comienza teniendo un repositorio propio con el código para poder editar todo su
 // Sustituye la tipografía que quieras usar. Inter viene descargada e importada en el proyecto.
 32 sans: ['Inter', ...fontFamily.sans],},
 ```
+
+## Configuración necesaria
+
+***Activa GitHub Pages por Fuente "Actions" y activa manualmente el Workflow que permite el despligue en GitHub Pages.***
 
 <br>
 
@@ -208,7 +213,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22.12.0
           cache: npm
 
       - name: Install dependencies
@@ -292,7 +297,15 @@ En Visual Studio Code:
 * En la **pestaña lateral izquierda haz clic en el árbol de nodos** (tercer icono probablemente, debajo del de búsqueda). Si se tienen más proyectos abiertos es probable que los detecte y no salgan los mensajes necesarios. _Cierra todos los proyectos activos y abre en solitario el proyecto_.
 * **Inicializar Repositorio** / *Initialize Repository*. Se muestran todos los cambios y archivos que se subirán. Puedes comprobar desde aquí si hay algún archivo/directorio que hayas olvidado meter en el `.gitignore`, pues no debería haber muchos archivos (12).
 * **Commit inicial**. Empaqueta con un mensaje descriptivo el primer commit.
-* **Publicar rama**. Al ser el primer commit del proyecto, este primer *push* generará la rama "main" directamente. Nos pedirá un **nombre de proyecto** en la barra de comandos superior (poniendo por defecto el nombre del proyecto local) y si queremos que sea **público o privado**. Para GitHub Pages se necesita, en el modelo gratuito, que el proyecto sea público, pero es mejor publicarlo en privado para hacer la configuración más tranquilamente.
+* **Publicar rama**. Al ser el primer commit del proyecto, este primer *push* generará la rama "main" directamente. Nos pedirá un **nombre de proyecto** en la barra de comandos superior (poniendo por defecto el nombre del proyecto local) y si queremos que sea **público o privado**. Para GitHub Pages se necesita, en el modelo gratuito, que el proyecto sea público, a no ser que no sea tu caso, el proyecto debe ser **PÚBLICO**.
+
+<p align="center">✦ ✦ ✦</p>
+
+#### GitHub Pages
+
+Con el proyecto subido a GitHub ve a `Configuración/Settings` al apartado de `Pages`. Cambia el `Fuente/Source` a "GitHub Actions". Si quieres cambiarle la URL a un dominio particular que tengas, puedes hacerlo desde este mismo apartado, pero este tutorial no llega hasta ahí, lo siento.
+
+Desde el apartado del proyecto "Actions" podrás ver el workflow de construcción y despligue de la página web. Cualquier cosa que _falle_, edita el archivo `.github/workflows/deploy.yml` para su correcto funcionamiento.
 
 ## Personalización del Proyecto (?)
 ### Personalización del Proyecto (?)
