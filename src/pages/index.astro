@@ -1,7 +1,5 @@
 ---
-
----
-
+/**
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -14,4 +12,206 @@
 	<body>
 		<h1>Astro</h1>
 	</body>
+</html>
+
+*/
+---
+
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porfolio Ismael Plaza</title>
+    <meta name="description" content="Esta página estará disponible muy pronto." />
+    <meta name="robots" content="noindex, nofollow" />
+	<link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}favicon.png`} />
+
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        height: 100%;
+        width: 100%;
+        background-color: #0b0f12; /* Fondo más oscuro tirando a gris oscuro */
+        background-image: radial-gradient(circle at 50% 50%, rgba(13, 148, 136, 0.08) 0%, transparent 80%);
+        color: #f1f5f9;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        overflow: hidden;
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        padding: 1rem;
+      }
+
+      .card-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 860px;
+        width: 100%;
+        max-height: 85vh;
+        filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.75));
+        transition: transform 0.3s ease;
+      }
+
+      .card-wrapper:hover {
+        transform: scale(1.01);
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        display: block;
+        border-radius: 1.5rem;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" role="main" aria-label="Página en Construcción">
+      <h1 class="sr-only">Página en Construcción</h1>
+      <p class="sr-only">Estará disponible muy pronto.</p>
+
+      <!-- Imagen vectorial -->
+      <div class="card-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+          <defs>
+            <!-- Fondo gris oscuro profundo -->
+            <linearGradient id="darkGrayBg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0e1317" />
+              <stop offset="50%" stop-color="#141a1f" />
+              <stop offset="100%" stop-color="#0a0d10" />
+            </linearGradient>
+
+            <!-- Ventana de desarrollo en gris / slate -->
+            <linearGradient id="editorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#26313b" />
+              <stop offset="100%" stop-color="#182026" />
+            </linearGradient>
+
+            <!-- Acentos aquamarina y advertencia ámbar -->
+            <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0d9488" />
+              <stop offset="100%" stop-color="#2dd4bf" />
+            </linearGradient>
+            <linearGradient id="warningGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f59e0b" />
+              <stop offset="100%" stop-color="#d97706" />
+            </linearGradient>
+
+            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="8" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+
+          <!-- Fondo Canvas: Gris Oscuro -->
+          <rect width="800" height="600" rx="24" fill="url(#darkGrayBg)" stroke="#1e272e" stroke-width="1.5" />
+          
+          <!-- Cuadrícula técnica sutil -->
+          <g opacity="0.05" stroke="#2dd4bf" stroke-width="1">
+            <line x1="100" y1="0" x2="100" y2="600" />
+            <line x1="200" y1="0" x2="200" y2="600" />
+            <line x1="300" y1="0" x2="300" y2="600" />
+            <line x1="400" y1="0" x2="400" y2="600" />
+            <line x1="500" y1="0" x2="500" y2="600" />
+            <line x1="600" y1="0" x2="600" y2="600" />
+            <line x1="700" y1="0" x2="700" y2="600" />
+            <line x1="0" y1="100" x2="800" y2="100" />
+            <line x1="0" y1="200" x2="800" y2="200" />
+            <line x1="0" y1="300" x2="800" y2="300" />
+            <line x1="0" y1="400" x2="800" y2="400" />
+            <line x1="0" y1="500" x2="800" y2="500" />
+          </g>
+
+          <!-- Resplandor sutil aquamarina de fondo -->
+          <circle cx="400" cy="260" r="140" fill="#0d9488" opacity="0.12" filter="url(#glow)" />
+
+          <!-- Gráfico Central: Ventana de Código y Grúa -->
+          <g transform="translate(240, 100)">
+            <ellipse cx="160" cy="295" rx="140" ry="15" fill="#000000" opacity="0.5" />
+
+            <rect x="10" y="30" width="300" height="200" rx="14" fill="url(#editorGrad)" stroke="#37434d" stroke-width="2" />
+            
+            <path d="M10 44 Q10 30 24 30 L296 30 Q310 30 310 44 L310 62 L10 62 Z" fill="#101519" />
+            <circle cx="30" cy="46" r="4.5" fill="#ef4444" />
+            <circle cx="44" cy="46" r="4.5" fill="#f59e0b" />
+            <circle cx="58" cy="46" r="4.5" fill="#10b981" />
+            
+            <rect x="30" y="80" width="90" height="12" rx="4" fill="#0d9488" opacity="0.75" />
+            <rect x="30" y="102" width="160" height="8" rx="3" fill="#4b5763" opacity="0.8" />
+            <rect x="30" y="118" width="130" height="8" rx="3" fill="#4b5763" opacity="0.6" />
+            <rect x="30" y="134" width="180" height="8" rx="3" fill="#4b5763" opacity="0.4" />
+
+            <rect x="30" y="156" width="70" height="46" rx="6" fill="#0e1317" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4 3" />
+            <rect x="110" y="156" width="70" height="46" rx="6" fill="#0e1317" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4 3" />
+            <rect x="190" y="156" width="70" height="46" rx="6" fill="#0e1317" stroke="#2dd4bf" stroke-width="1.5" stroke-dasharray="4 3" />
+
+            <!-- Grúa con bloque de código -->
+            <g transform="translate(180, 0)">
+              <line x1="45" y1="0" x2="45" y2="65" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6 2" />
+              <path d="M41 65 C41 74 49 76 49 70 C49 66 45 63 45 63" fill="none" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" />
+              <g transform="translate(15, 75)">
+                <polygon points="30,0 60,15 30,30 0,15" fill="#2dd4bf" filter="url(#glow)" />
+                <polygon points="0,15 30,30 30,55 0,40" fill="#0f766e" />
+                <polygon points="60,15 30,30 30,55 60,40" fill="#0d9488" />
+                <text x="30" y="30" font-family="monospace" font-size="11" font-weight="900" fill="#f0fdfa" text-anchor="middle">&lt;/&gt;</text>
+              </g>
+            </g>
+
+            <!-- Barrera de advertencia rayada ámbar -->
+            <g transform="translate(35, 238)">
+              <rect x="0" y="0" width="250" height="18" rx="6" fill="#182026" stroke="#f59e0b" stroke-width="1.5" />
+              <polygon points="20,0 35,0 15,18 0,18" fill="#f59e0b" />
+              <polygon points="60,0 75,0 55,18 40,18" fill="#f59e0b" />
+              <polygon points="100,0 115,0 95,18 80,18" fill="#f59e0b" />
+              <polygon points="140,0 155,0 135,18 120,18" fill="#f59e0b" />
+              <polygon points="180,0 195,0 175,18 160,18" fill="#f59e0b" />
+              <polygon points="220,0 235,0 215,18 200,18" fill="#f59e0b" />
+            </g>
+          </g>
+
+          <!-- Chip de estado -->
+          <g transform="translate(400, 440)">
+            <rect x="-120" y="-18" width="240" height="36" rx="18" fill="#12181d" stroke="#f59e0b" stroke-width="1.5" />
+            <circle cx="-95" cy="0" r="5" fill="#f59e0b" filter="url(#glow)" />
+            <text x="-80" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="800" fill="#fde68a" letter-spacing="1.5">EN DESARROLLO</text>
+            <text x="30" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#99f6e4">FASE ACTIVA</text>
+          </g>
+
+          <!-- Títulos principales -->
+          <text x="400" y="505" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#f1f5f9" letter-spacing="-0.5">
+            Página en Construcción
+          </text>
+          <text x="400" y="538" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+            Estará disponible muy pronto.
+          </text>
+        </svg>
+      </div>
+    </main>
+  </body>
 </html>

@@ -307,8 +307,13 @@ Con el proyecto subido a GitHub ve a `Configuración/Settings` al apartado de `P
 
 Desde el apartado del proyecto "Actions" podrás ver el workflow de construcción y despligue de la página web. Cualquier cosa que _falle_, edita el archivo `.github/workflows/deploy.yml` para su correcto funcionamiento.
 
-## Personalización del Proyecto (?)
-### Personalización del Proyecto (?)
+## Personalización del Proyecto
+
+Con los pasos anteriores ya deberías poder tener un _proyecto funcional_ en GitHub Pages (donde solo se ve el título "Astro").
+
+El resto del código del portfolio está explicado en la `Documentación técnica` de una **manera global** y documentado **en el propio código** si buscas algo **más específico**, si necesitas alguna guía en la personalización o creación del código para tu propio portfolio puedes seguirlo para "no copiar y pegar" si lo deseas ^^/.
+
+### Ayuda adicional de configuración y personalización
 
 ---
 
